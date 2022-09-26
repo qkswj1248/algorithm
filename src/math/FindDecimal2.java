@@ -4,6 +4,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 백준 2581 : 소수
+ * (60이상 100이하중 소수 찾기)
+ *  -입력-
+ *  60
+ *  100
+ *  -출력-
+ *  620
+ *  61
+ *
+ */
 public class FindDecimal2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

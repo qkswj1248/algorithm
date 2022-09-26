@@ -13,12 +13,12 @@ public class RoomAssignment {
 		StringBuilder sb = new StringBuilder();
 		StringTokenizer token;
 		int floor, unit;
-		
+
 		for(int i=0; i<n; i++) {
 			token = new StringTokenizer(br.readLine());
 			int topfloor = Integer.parseInt(token.nextToken()); //h
 			int room = Integer.parseInt(token.nextToken()); //w
-			int goal = Integer.parseInt(token.nextToken()); //n ÀÌ ´õ ÁÁÀº º¯¼ö¸íÀÌ ¾úÀ» °Í °°´Ù.
+			int goal = Integer.parseInt(token.nextToken()); //n ì´ ë” ì¢‹ì€ ë³€ìˆ˜ëª…ì´ ì—ˆì„ ê²ƒ ê°™ë‹¤.
 			if((goal%topfloor) == 0) {
 				unit = (int)(goal/topfloor);
 				floor = topfloor;
@@ -32,6 +32,6 @@ public class RoomAssignment {
 				sb.append(floor).append(unit).append('\n');
 			}
 		}
-		System.out.println(sb);		
+		System.out.println(sb);
 	}
 }

@@ -4,8 +4,19 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 백준 1929 : 소수 구하기
+ * (3과 16 사이의 소수)
+ * -입력-
+ * 3 16
+ * -출력-
+ * 3
+ * 5
+ * 7
+ * 11
+ * 13
+ */
 public class FindDecimal {
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] str = br.readLine().split(" ");

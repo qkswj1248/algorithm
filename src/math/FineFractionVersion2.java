@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class FineFractionVersion2 {
-//´Ù¸¥ºĞ ÄÚµù.. ÁøÂ¥ ¹ÌÃÆ´Ù. ¾î¶»°Ô -¸¦ ÇÒ »ı°¢À» ÇßÁö???
+	//ë‹¤ë¥¸ë¶„ ì½”ë”©.. ì§„ì§œ ë¯¸ì³¤ë‹¤. ì–´ë–»ê²Œ -ë¥¼ í•  ìƒê°ì„ í–ˆì§€???
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());

@@ -10,27 +10,27 @@ public class FineFractions {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 		int sum = 0, line = 0;
-		
+
 		do {
 			line++;
 			sum += line;
-		} while((sum + line + 1) <= n); //ÀÌ·¸°Ô ÇØ¾ß ÇÑ ¹ø ´õ µµ´Â ÀÏÀÌ ¾ø´Ù.
-		
+		} while((sum + line + 1) <= n); //ì´ë ‡ê²Œ í•´ì•¼ í•œ ë²ˆ ë” ë„ëŠ” ì¼ì´ ì—†ë‹¤.
+
 		int dis = n - sum, up = 1, down = 1;
-		//Â¦¼öÀÏ ¶© ³»·Á°¡°í È¦¼öÀÏ ¶© ¿Ã¶ó°¡°í
+		//ì§ìˆ˜ì¼ ë• ë‚´ë ¤ê°€ê³  í™€ìˆ˜ì¼ ë• ì˜¬ë¼ê°€ê³ 
 		if(dis == 0) {
 			up = line;
 		}else {
-			line++; //´ÙÀ½ÁÙ·Î ³Ñ¾î°¡´Ï±î
+			line++; //ë‹¤ìŒì¤„ë¡œ ë„˜ì–´ê°€ë‹ˆê¹Œ
 			dis--;
 			down = line;
 			up += dis;
 			down -= dis;
 		}
 		if(line % 2 == 1) {
-			System.out.println(down + "/" + up);			
+			System.out.println(down + "/" + up);
 		}else {
-			System.out.println(up + "/"+ down);			
+			System.out.println(up + "/"+ down);
 		}
 		
 	}
