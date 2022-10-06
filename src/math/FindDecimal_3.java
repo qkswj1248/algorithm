@@ -28,6 +28,7 @@ import java.util.ArrayList;
 public class FindDecimal_3 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         ArrayList<Integer> inputs = new ArrayList<>();
         int in;
         while(true){
@@ -36,16 +37,29 @@ public class FindDecimal_3 {
                 break;
             inputs.add(in);
         }
-        int MAX = maxInt(inputs);
-        boolean[] isComposition = new boolean[MAX];
-        findDecimals(isComposition, MAX);
 
+        int MAX_INPUT = maxInt(inputs);
+        boolean[] isComposition = new boolean[MAX_INPUT+1]; //0은 안쓰고 1부터 n의 공간이 필요하므로 +1을 해야한다.
+        findDecimals(isComposition, MAX_INPUT);
+
+        int counter = 0;
+        for(int input : inputs){
+            counter = 0;
+            for(int i=input+1 ; i<input*2; i++){
+                if(!isComposition[i])
+                    counter++;
+            }
+            sb.append(counter).append('\n');
+        }
+
+        System.out.println(sb);
 
     }
 
     private static void findDecimals(boolean[] isComposition, int size) {
         for(int i=2; i*i<=size; i++){
             for(int j=2; i*j<=size; j++){
+                System.out.println("i*j="+i*j);
                 if(!isComposition[i*j]){
                     isComposition[i*j] = true;
                 }
