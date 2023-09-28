@@ -3,10 +3,14 @@ package silber;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class MakeOne {
+
+    static LinkedList<Integer> queue = new LinkedList<>();
+    static int[] method = {3, 2};
+    static int count = 0;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -15,12 +19,7 @@ public class MakeOne {
         BFS(n, visited);
 
         System.out.print(count);
-
     }
-
-    static LinkedList<Integer> queue = new LinkedList<>();
-    static int[] method = {3, 2};
-    static int count = 0;
 
     static void BFS(int node, boolean[] visited){
 
